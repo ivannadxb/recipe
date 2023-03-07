@@ -1,23 +1,24 @@
-function setMyRecipesComponent ({label,image, calories, ingredients}){
+function MyRecipesComponent ({label,image, calories, ingredients}){
     return(
-        <div>
-            <div className="container">
+    <div>
+    <div className="container">
 <h2>{label}</h2>
-            </div>
-            <div className="container">
-                <img className="tasty" src={image}/>
-                </div>
+    </div>
+    <div className="container">
+    <img className="tasty" alt="img" src={image}/>
+    </div>
 
-        <ul className="list">
+    <ul className="list">
 {ingredients.map(ingredient => (
-            <li> <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" className="icon"/> 
-            {ingredient}</li>
+    <li> <img src="https://img.freepik.com/free-icon/checked_318-197857.jpg?size=338&ext=jpg&uid=R83624123&ga=GA1.2.224055333.1676563210&semt=sph" alt="img" className="icon"/> 
+    {ingredient}</li>
 ))}
-        </ul>
-        <div className="container">
-                <p className="par">{calories.toFixed()}</p>
-                </div>
-
-        </div>
+    </ul>
+    <div className="container">
+<p className="par">{calories.toFixed()}</p>
+    </div>
+    </div>
     )
 }
+
+export default MyRecipesComponent;
